@@ -3,18 +3,17 @@ package ufc;
 public class League {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 League theLeague = new League();
 
 Gym[] theTeams = theLeague.createTeams();
-	        Match[] theGames = theLeague.createGames(theTeams);
+	        Fight[] theGames = theLeague.createGames(theTeams);
 
-	        Fight currGame = theGames[0];
+	        Fight currFight = theGames[0];
 	        
-	        Fight.playGame();
+	        currFight.playGame();
 	        
-	        System.out.println(currGame.getDescription());
+	        System.out.println(currFight.getDescription());
 
 	    }
 
@@ -29,12 +28,12 @@ Gym[] theTeams = theLeague.createTeams();
 	        Fighter[] theFighters = {fighter1, fighter2, fighter3};
 
 	        Gym gym1 = new Gym();
-	        gym1.gymName = "The Greens";
+	        gym1.gymName = "UFC Team1";
 	        gym1.fightersArray = theFighters;
 
 	        // Create team2
 	        Gym gym2 = new Gym();
-	        gym2.gymName = "The Reds";
+	        gym2.gymName = "UFC Team2";
 	        gym2.fightersArray = new Fighter[3];
 	        gym2.fightersArray[0] = new Fighter();
 	        gym2.fightersArray[0].fighterName = "Robert Service";
@@ -47,14 +46,15 @@ Gym[] theTeams = theLeague.createTeams();
 	        return theGyms;
 	    }
 
-	    public Match[] createGames(Gym[] theGyms) {
+	    public Fight[] createGames(Gym[] theGyms) {
 	        Fight theFight = new Fight();
-	        theFight.homeTeam = theTeams[0];
-	        theFight.awayTeam = theTeams[1];
+	        theFight.homeTeam = theGyms[0];
+	        theFight.awayTeam = theGyms[1];
+	        
 	       
 	        
 	        
-	        Match[] theMatch = {theMatch};
+	        Fight[] theMatch = {theFight};
 	        return theMatch;
 	    }
 

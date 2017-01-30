@@ -1,18 +1,20 @@
 package ufc;
 
+import Utils.GameUtils;
+
 public class Fight {
 
 	
 public Gym homeTeam;
 public Gym awayTeam;
-public Match[] match;
+public Match[] matchs;
 
 public void playGame(int maxFights) {
     
     int numberOfFights = (int)(Math.random() * maxFights + 1);
     Match[] theFights = new Match[numberOfFights];
-    this.match = theFights;
-   // GameUtils.addGameGoals(this);        
+    this.matchs = theFights;
+   GameUtils.addGameFight(this);        
 }
 
 public void playGame() {
@@ -21,11 +23,11 @@ public void playGame() {
 
 public String getDescription() {
     StringBuilder returnString = new StringBuilder();
-    for (Match currGoal: this.match) {
-        returnString.append("Goal scored after "
-        + currGoal.theTime + " mins by "
-        + currGoal.theFighter.fighterName + " of "
-        + currGoal.theGym.gymName +
+    for (Match currFight: this.matchs) {
+        returnString.append("K.O. After "
+        + currFight.theTime + " mins by "
+        + currFight.theFighter.fighterName + " of "
+        + currFight.theGym.gymName +
           "\n");
     }
     return returnString.toString();
