@@ -1,6 +1,6 @@
 package ufc;
 
-import Utils.GameUtils;
+import Utils.FightUtils;
 
 public class Fight {
 
@@ -14,7 +14,7 @@ public void playGame(int maxFights) {
     int numberOfFights = (int)(Math.random() * maxFights + 1);
     Match[] theFights = new Match[numberOfFights];
     this.matchs = theFights;
-   GameUtils.addGameFight(this);        
+   FightUtils.addGameFight(this);        
 }
 
 public void playGame() {

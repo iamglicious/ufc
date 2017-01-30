@@ -8,7 +8,7 @@ import java.util.Arrays;
 import ufc.*;
 
 
-public class GameUtils {
+public class FightUtils {
 
     public static void addGameFight(Fight currFight) {
         
