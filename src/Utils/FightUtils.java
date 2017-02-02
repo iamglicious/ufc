@@ -48,7 +48,7 @@ public class FightUtils {
                 theGyms = (Gym)f.get(currFight);
                 //System.out.println(theGym);
             } catch (NoSuchFieldException|IllegalAccessException ef) { 
-                System.out.println("The addGoals() utility requires the Goal class to contain either:\n" +
+                System.out.println("The addFights() utility requires the Fighters class to contain either:\n" +
                         "public String fields called homeTeam and awayTeam, OR,\n" +
                         "public accessor methods called getHomeTeam() and getAwayTeam().");
             }
